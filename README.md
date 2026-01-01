@@ -22,10 +22,10 @@
 ## Screenshots  
 
 **Dark Theme**  
-![Customer Account Dashboard](https://github.com/inadeemkhan/magento2-profile-picture/blob/feature/admin-dark-theme/images/dark-theme.png) 
+![Customer Account Dashboard](https://github.com/inadeemkhan/magento2-admin-dark-and-light-theme/blob/feature/admin-dark-theme/images/dark-theme.png) 
 
 **Light Theme**  
-![Customer Account Create](https://github.com/inadeemkhan/magento2-profile-picture/blob/feature/admin-dark-theme/images/light-theme.png)  
+![Customer Account Create](https://github.com/inadeemkhan/magento2-admin-dark-and-light-theme/blob/feature/admin-dark-theme/images/light-theme.png)  
 
 ---
 
