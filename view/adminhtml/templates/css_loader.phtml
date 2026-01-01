@@ -2,21 +2,25 @@
 /** @var \Magento\Framework\View\Element\Template $block */
 /** @var \Magento\Framework\Escaper $escaper */
 
-// 1. Get the URL for the external LESS/CSS file
-$assetUrl = $block->getViewFileUrl('DevScripts_AdminTheme::css/light-styles.css');
-
-// 2. Get the Custom CSS text from the System Config
-// We use the helper-like method to fetch data from the scope config
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $scopeConfig = $objectManager->get(\Magento\Framework\App\Config\ScopeConfigInterface::class);
+
+// Get selected theme and custom CSS
+$selectedTheme = $scopeConfig->getValue('admintheme/general/theme_select', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 $customCss = $scopeConfig->getValue('admintheme/general/custom_css', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+
+$themeFile = false;
+if ($selectedTheme === 'light') {
+    $themeFile = 'DevScripts_AdminTheme::css/light-styles.css';
+} elseif ($selectedTheme === 'dark') {
+    $themeFile = 'DevScripts_AdminTheme::css/dark-styles.css';
+}
 ?>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?= $escaper->escapeHtmlAttr($assetUrl) ?>" />
+<?php if ($themeFile): ?>
+    <link rel="stylesheet" type="text/css" href="<?= $escaper->escapeHtmlAttr($block->getViewFileUrl($themeFile)) ?>" />
+<?php endif; ?>
 
 <?php if ($customCss): ?>
-    <style type="text/css">
-        /* Custom Admin CSS from Configuration */
-        <?= /* @noEscape */ $customCss ?>
-    </style>
+    <style><?= /* @noEscape */ $customCss ?></style>
 <?php endif; ?>
