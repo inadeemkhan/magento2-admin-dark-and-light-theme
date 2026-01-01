@@ -1,0 +1,22 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+
+// 1. Get the URL for the external LESS/CSS file
+$assetUrl = $block->getViewFileUrl('DevScripts_AdminTheme::css/light-styles.css');
+
+// 2. Get the Custom CSS text from the System Config
+// We use the helper-like method to fetch data from the scope config
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$scopeConfig = $objectManager->get(\Magento\Framework\App\Config\ScopeConfigInterface::class);
+$customCss = $scopeConfig->getValue('admintheme/general/custom_css', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+?>
+
+<link rel="stylesheet" type="text/css" media="all" href="<?= $escaper->escapeHtmlAttr($assetUrl) ?>" />
+
+<?php if ($customCss): ?>
+    <style type="text/css">
+        /* Custom Admin CSS from Configuration */
+        <?= /* @noEscape */ $customCss ?>
+    </style>
+<?php endif; ?>
