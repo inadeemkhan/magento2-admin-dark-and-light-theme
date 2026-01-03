@@ -1,9 +1,39 @@
 :root {
   --basic-color: #4a4747;
   --white-color: #fff;
+  --font-color: #e3e3e3;
+  --primary-bg-color: #373330;
+  --secondary-bg-color: #514943;
 }
 body {
-  color: #fff;
+  color: var(--font-color);
+}
+.data-grid-search-control-wrap .action-submit:hover:before {
+  color: var(--font-color);
+}
+.admin__collapsible-block-wrapper .admin__collapsible-title,
+.admin__field:not(.admin__field-option) > .admin__field-label,
+.admin__field-option .admin__field-label,
+.admin__field-note {
+  color: var(--font-color) !important;
+}
+.admin__page-nav-item:hover .admin__page-nav-link {
+  background-color: var(--secondary-bg-color);
+  color: var(--white-color);
+}
+.admin__collapsible-block-wrapper .admin__collapsible-title:hover, 
+.admin__collapsible-block-wrapper .admin__collapsible-title:visited, 
+.admin__collapsible-block-wrapper .admin__collapsible-title:focus {
+  color: var(--white-color);
+}
+.admin__page-nav-item-message .admin__page-nav-item-message-icon:after {
+  color: var(--white-color);
+}
+._has-datepicker + .ui-datepicker-trigger:after {
+  color: var(--white-color);
+}
+.image.image-placeholder .product-image-wrapper {
+  background-color: var(--primary-bg-color);
 }
 .page-layout-admin-login {
   background-color: #999999;
@@ -15,14 +45,14 @@ body {
 }
 .admin__action-dropdown {
   background-color: transparent;
-  color: #fff;
+  color: var(--font-color);
 }
 .admin__action-dropdown:hover, 
 .admin__action-dropdown:focus,
 .admin__action-dropdown:hover, 
 .admin__action-dropdown:focus {
   background-color: transparent;
-  color: #fff;
+  color: var(--font-color);
 }
 .admin-user .admin__action-dropdown:after,
 .admin-user .admin__action-dropdown:hover:after {
@@ -30,32 +60,74 @@ body {
 }
 .admin-user .admin__action-dropdown:before,
 .admin-user .admin__action-dropdown:hover:before {
-  color: #fff;
+  color: var(--font-color);
 }
 .page-wrapper,
 footer.page-footer {
-  background-color: #514943;
+  background-color: var(--secondary-bg-color);
+}
+.page-wrapper {
+  background-color: var(--secondary-bg-color);
+  min-height: 100vh;
+}
+#html-body {
+  background-color: var(--secondary-bg-color) !important;
+  min-height: 100%;
+}
+.admin__data-grid-header-row .action-select {
+  background-color: var(--secondary-bg-color);
 }
 .page-layout-admin-login .page-wrapper {
   border: 0;
   border-radius: 5px;
 }
+.action-menu, 
+.abs-action-menu .action-submenu, 
+.action-menu .action-submenu, 
+.actions-split .dropdown-menu .action-submenu, 
+.actions-split .action-menu .action-submenu, 
+.abs-action-menu .action-submenu .action-submenu, 
+.actions-split .dropdown-menu .action-submenu .action-submenu, 
+.actions-split .action-menu .action-submenu .action-submenu, 
+.actions-split .action-menu .action-submenu .action-submenu {
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
+}
+.abs-action-menu .item, 
+.abs-action-menu .action-menu-item, 
+.actions-split .dropdown-menu .item, 
+.actions-split .dropdown-menu .action-menu-item, 
+.actions-split .action-menu .item, 
+.actions-split .action-menu .action-menu-item, 
+.actions-split .abs-action-menu .action-submenu .item, 
+.actions-split .abs-action-menu .action-submenu .action-menu-item, 
+.actions-split .action-menu .action-submenu .item, 
+.actions-split .action-menu .action-submenu .action-menu-item, 
+.actions-split .actions-split .dropdown-menu .action-submenu .item, 
+.actions-split .actions-split .dropdown-menu .action-submenu .action-menu-item, 
+.actions-split .abs-action-menu .action-submenu .action-submenu .item, 
+.actions-split .abs-action-menu .action-submenu .action-submenu .action-menu-item, 
+.actions-split .actions-split .dropdown-menu .action-submenu .action-submenu .item, 
+.actions-split .actions-split .dropdown-menu .action-submenu .action-submenu .action-menu-item {
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
+}
 .page-layout-admin-login .admin__field .admin__field-control input:hover {
   border-color: #ced4da;
 }
 .page-layout-admin-login .admin__field .admin__field-control input:focus {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .page-layout-admin-login .admin__legend {
   color: #5680E9;
   color: var(--basic-color);
 }
 .message {
-  background-color: #373330;
-  color: #fff;
+  background-color: var(--primary-bg-color);
+  color: var(--font-color);
 }
 header.page-header h1.page-title {
-  color: #fff;
+  color: var(--font-color);
 }
 .order-errors .admin__fieldset-wrapper .title {
   background: #e3e3e3;
@@ -74,7 +146,7 @@ footer.login-footer {
   color: var(--white-color);
 }
 a.logo {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
 }
 a {
   color: #007bdb;
@@ -85,7 +157,7 @@ a:hover {
 p.copyright,
 p.magento-version,
 .magento-version strong {
-  color: #fff;
+  color: var(--font-color);
 }
 .page-footer a {
   color: #007bdb;
@@ -114,18 +186,18 @@ p.magento-version,
   color: #007bdb;
 }
 .data-grid th {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
 }
 .data-grid tr.data-row,
 table.data-grid tr {
   border-bottom: 1px solid #999;
 }
 .data-grid .data-grid-th {
-  color: #fff;
+  color: var(--font-color);
 }
 .data-grid td {
   background-color: #373330 !important;
-  color: #fff;
+  color: var(--font-color);
 }
 .data-grid .data-grid-th._sortable:focus {
   background-color: transparent;
@@ -134,16 +206,40 @@ table.data-grid tr {
   background-color: transparent;
 }
 .data-grid td .action-select {
-  color: var(--basic-color);
+  color: var(--white-color);
 }
 .data-grid td .action-select:hover {
-  color: var(--basic-color);
+  color: var(--white-color);
+}
+.action-menu a.action-menu-item, 
+.abs-action-menu .action-submenu a.action-menu-item, 
+.action-menu .action-submenu a.action-menu-item, 
+.actions-split .dropdown-menu .action-submenu a.action-menu-item, 
+.actions-split .action-menu .action-submenu a.action-menu-item, 
+.abs-action-menu .action-submenu .action-submenu a.action-menu-item, 
+.actions-split .dropdown-menu .action-submenu .action-submenu a.action-menu-item, 
+.actions-split .action-menu .action-submenu .action-submenu a.action-menu-item, 
+.actions-split .action-menu .action-submenu .action-submenu a.action-menu-item {
+  color: var(--font-color);
+}
+.action-menu > li:hover, 
+.abs-action-menu .action-submenu > li:hover, 
+.action-menu .action-submenu > li:hover, 
+.actions-split .dropdown-menu .action-submenu > li:hover, 
+.actions-split .action-menu .action-submenu > li:hover, 
+.abs-action-menu .action-submenu .action-submenu > li:hover, 
+.actions-split .dropdown-menu .action-submenu .action-submenu > li:hover, 
+.actions-split .action-menu .action-submenu .action-submenu > li:hover, 
+.actions-split .action-menu .action-submenu .action-submenu > li:hover {
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
 }
 .data-grid td .action-select:hover:after {
-  border-color: var(--basic-color) transparent transparent transparent;
+  border-color: var(--white-color) transparent transparent transparent;
 }
 .data-grid td .action-select:after {
-  border-color: var(--basic-color) transparent transparent transparent;
+  border-color: var(--white-color) transparent transparent transparent;
 }
 .data-grid tr:hover td {
   background: #f8f9fa;
@@ -159,7 +255,7 @@ table.data-grid tr {
 }
 .action-default {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -167,31 +263,31 @@ table.data-grid tr {
 .action-default:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-default:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-default:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
 }
 .action-primary .page-actions .actions-split {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -199,30 +295,30 @@ table.data-grid tr {
 .action-primary .page-actions .actions-split:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-secondary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -230,24 +326,24 @@ table.data-grid tr {
 .action-secondary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-secondary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-secondary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .abs-action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -255,24 +351,24 @@ table.data-grid tr {
 .abs-action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .abs-action-primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .abs-action-primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 button.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -280,24 +376,24 @@ button.primary {
 button.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 button.primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 button.primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .action-basic {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -305,12 +401,12 @@ button.primary:focus {
 .action-basic:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions-buttons .action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -318,19 +414,19 @@ button.primary:focus {
 .page-actions-buttons .action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions-buttons button.ordersuccess-current {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
 }
 .action-advanced-reports {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -338,12 +434,12 @@ button.primary:focus {
 .action-advanced-reports:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > button.action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -351,24 +447,24 @@ button.primary:focus {
 .page-actions > button.action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > button.action-primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > button.action-primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -376,24 +472,24 @@ button.primary:focus {
 .page-actions .page-actions-buttons > button.action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.action-primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.action-primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -401,24 +497,24 @@ button.primary:focus {
 .page-actions .page-actions-buttons > button.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.action-secondary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -426,24 +522,24 @@ button.primary:focus {
 .page-actions .page-actions-buttons > button.action-secondary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.action-secondary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > button.action-secondary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > .block-footer .action-add.action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -451,24 +547,24 @@ button.primary:focus {
 .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > .block-footer .action-add.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -476,24 +572,24 @@ button.primary:focus {
 .page-actions .page-actions-buttons > .block-footer .action-add.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > .block-footer .action-add.primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .page-actions-buttons > .block-footer .action-add.primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > button.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -501,24 +597,24 @@ button.primary:focus {
 .page-actions > button.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > button.primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > button.primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > .block-footer .action-add.action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -526,24 +622,24 @@ button.primary:focus {
 .page-actions > .block-footer .action-add.action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > .block-footer .action-add.action-primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > .block-footer .action-add.action-primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > .block-footer .action-add.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -551,24 +647,24 @@ button.primary:focus {
 .page-actions > .block-footer .action-add.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > .block-footer .action-add.primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions > .block-footer .action-add.primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .page-actions .actions-split {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   border-radius: 4px;
 }
 .page-actions .actions-split .action-toggle {
@@ -578,7 +674,7 @@ button.primary:focus {
 }
 .block-footer .action-add.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -586,24 +682,24 @@ button.primary:focus {
 .block-footer .action-add.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .block-footer .action-add.primary:active {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .block-footer .action-add.primary:focus {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .block-footer .action-add {
   background-color: #ccc;
-  color: #47404f;
+  color: var(--font-color);
   border-color: #ccc;
   border-radius: 4px;
   font-weight: 400;
@@ -616,7 +712,7 @@ button.primary:focus {
 }
 .steps-wizard .select-attributes-actions .action-default {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -624,12 +720,12 @@ button.primary:focus {
 .steps-wizard .select-attributes-actions .action-default:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .attribute-popup-actions .page-actions-buttons > button.action-default.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -637,7 +733,7 @@ button.primary:focus {
 .attribute-popup-actions .page-actions-buttons > button.action-default.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .attribute-popup-actions .action-default.reset {
@@ -645,7 +741,7 @@ button.primary:focus {
 }
 popup-actions .page-actions-buttons > button.action-default.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -653,12 +749,12 @@ popup-actions .page-actions-buttons > button.action-default.primary {
 popup-actions .page-actions-buttons > button.action-default.primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .modal-popup .modal-footer .action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   text-shadow: none;
   border-radius: 4px;
@@ -668,7 +764,7 @@ popup-actions .page-actions-buttons > button.action-default.primary:hover {
 .modal-popup .modal-footer .action-primary:hover {
   background-color: var(--basic-color);
   color: var(--white-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   box-shadow: 0 8px 25px -8px var(--basic-color);
 }
 .modal-popup .modal-footer .action-secondary {
@@ -676,7 +772,7 @@ popup-actions .page-actions-buttons > button.action-default.primary:hover {
 }
 .admin__control-wysiwig .buttons-set button {
   background-color: #ccc;
-  color: #47404f;
+  color: var(--font-color);
   border-color: #ccc;
   border-radius: 4px;
   font-weight: 400;
@@ -689,7 +785,7 @@ popup-actions .page-actions-buttons > button.action-default.primary:hover {
 }
 .data-grid-filters-action-wrap .action-default._active {
   background: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
   margin: 0;
   padding-bottom: 0.7rem;
 }
@@ -742,25 +838,25 @@ button.tertiary {
   color: var(--basic-color) !important;
 }
 .admin__control-text {
-  background-color: #f8f9fa;
-  color: #47404f;
-  border: 1px solid #ced4da;
+  background-color: var(--secondary-bg-color);
+  color: #fff;
+  border: 1px solid #fff;
   border-radius: 4px;
 }
 .admin__control-text:hover {
   border-color: #ced4da;
 }
 .admin__control-text:focus {
-  color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  color: var(--white-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .admin__control-select {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: #fff;
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
@@ -768,36 +864,36 @@ button.tertiary {
   border-color: #ced4da;
 }
 .admin__control-select:focus {
-  color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  color: #fff;
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .admin__control-multiselect {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 .admin__control-multiselect:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .admin__control-file-label:before {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 .admin__control-textarea {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
@@ -806,63 +902,63 @@ button.tertiary {
 }
 .admin__control-textarea:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .selectmenu {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 textarea {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 textarea:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .admin__control-addon [class*='admin__control-'][class] ~ [class*='admin__addon-']:last-child:before {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 .admin__control-addon [class*='admin__control-'][class]:focus ~ [class*='admin__addon-']:last-child:before {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 [class*='adminhtml-giftwrapping-'] .field-base_price .admin__control-addon [class*='admin__control-'][class] ~ .addafter:last-child:before {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 [class*='adminhtml-giftwrapping-'] .field-base_price .admin__control-addon [class*='admin__control-'][class]:focus ~ .addafter:last-child:before {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .ui-datepicker .ui-datepicker-title select {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
@@ -871,61 +967,71 @@ textarea:focus {
 }
 .ui-datepicker .ui-datepicker-title select:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .ui-datepicker:before {
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+.ui-datepicker table.ui-datepicker-calendar {
+  background-color: var(--secondary-bg-color);
+}
+.ui-datepicker table.ui-datepicker-calendar span, 
+.ui-datepicker table.ui-datepicker-calendar a {
+  color: var(--font-color);
+}
+.ui-datepicker table.ui-datepicker-calendar .ui-state-disabled span {
+  background-color: var(--secondry-bg-color);
 }
 .ui-datepicker .ui-datepicker-buttonpane button {
   color: var(--basic-color);
+}
+.ui-datepicker table.ui-datepicker-calendar .ui-datepicker-today a {
+  background-color: var(--primary-bg-color);
+}
+.ui-datepicker .ui-datepicker-buttonpane button, 
+.ui-datepicker .ui-datepicker-buttonpane .block-footer .action-add {
+  background-color: var(--primary-bg-color);
+  color: var(--font-color);
+  border-color: var(--font-color);
 }
 .ui-datepicker .ui-datepicker-buttonpane .block-footer .action-add {
   color: var(--basic-color);
 }
 input {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 .admin__scope-old .control > input {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
 .admin__scope-old textarea {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
-.admin__scope-old select[multiple] {
-  background-color: #f8f9fa;
-  color: #47404f;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
+.admin__page-nav {
+  background-color: var(--primary-bg-color);
 }
-.admin__scope-old select[size] {
-  background-color: #f8f9fa;
-  color: #47404f;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-}
-.admin__scope-old select {
-  background-color: #f8f9fa;
-  color: #47404f;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-}
+.admin__scope-old select[multiple],
+.admin__scope-old select[size],
+.admin__scope-old select,
 .admin__scope-old input[type=text] {
-  background-color: #f8f9fa;
-  color: #47404f;
-  border: 1px solid #ced4da;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
+  border: 1px solid #ffffff;
   border-radius: 4px;
 }
 .admin__scope-old .fieldset-wrapper > .fieldset-wrapper-title {
@@ -934,9 +1040,20 @@ input {
 .admin__scope-old .fieldset > .legend {
   border-bottom: 1px solid #dee2e6;
 }
+.abs-action-quaternary, 
+.page-actions > button, 
+.page-actions .page-actions-buttons > button, 
+.page-actions .page-actions-buttons > .action, 
+.page-actions .page-actions.floating-header > button, 
+.page-actions .page-actions.floating-header > .action, 
+.page-actions > .block-footer .action-add, 
+.page-actions .page-actions-buttons > .block-footer .action-add {
+  color: var(--font-color);
+  background-color: var(--secondry-bg-color);
+}
 .accordion .config input[type='password'] {
-  background-color: #f8f9fa;
-  color: #47404f;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
@@ -944,7 +1061,7 @@ input {
   border: 0;
 }
 .selectmenu-items {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .selectmenu-items li:last-child .selectmenu-item-action {
   color: var(--basic-color);
@@ -953,198 +1070,209 @@ input {
   color: var(--basic-color);
 }
 .action-select-wrap._active .action-select {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .action-select-wrap._active .action-select:before {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .action-menu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .action-menu .action-submenu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .abs-action-menu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .abs-action-menu .action-submenu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split .dropdown-menu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split .dropdown-menu .action-submenu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split .action-menu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split .action-menu .action-submenu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split .abs-action-menu .action-submenu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split:hover {
   box-shadow: none;
 }
 .selectmenu._active {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .selectmenu._active .selectmenu-toggle:before {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .action-multicheck-wrap._active .admin__control-checkbox + label:before {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .action-multicheck-wrap._active .action-multicheck-toggle {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .action-multicheck-wrap .action-multicheck-toggle:focus {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .page-wrapper .admin__scope-old input:focus {
-  color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  color: var(--font-color);
+  background-color: var(--secondary-bg-color);
+  border-color: #fff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .page-wrapper .admin__scope-old textarea:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .page-wrapper .admin__scope-old select:focus {
-  color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  color: var(--font-color);
+  background-color: var(--secondary-bg-color);
+  border-color: #fff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .page-wrapper .admin__control-select:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.admin__scope-old .fieldset-wrapper, 
+.admin__scope-old .fieldset {
+  background-color: var(--secondary-bg-color);
+}
+.admin__scope-old .rule-param .label {
+  color: var(--white-color);
+}
+.admin__scope-old .fieldset-wrapper > .fieldset-wrapper-title .title, 
+.admin__scope-old .fieldset > .legend span {
+  color: var(--font-color);
+}
 .page-wrapper .admin__control-multiselect:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .page-wrapper .admin__control-textarea:focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .admin__control-file:active + .admin__control-file-label:before {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .admin__control-file:focus + .admin__control-file-label:before {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .selectmenu._focus {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .selectmenu._focus .selectmenu-toggle:before {
   color: #665c70;
-  background-color: #fff;
-  border-color: var(--basic-color);
+  background-color: var(--secondary-bg-color);
+  border-color: var(--white-color);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .dashboard-totals-item:first-child .price {
-  color: #fff;
+  color: var(--font-color);
 }
 .dashboard-item-primary:first-child .dashboard-sales-value,
 .dashboard-sales-value {
-  color: #fff;
+  color: var(--font-color);
 }
 .dashboard-container .empty-text {
-  background-color: #373330;
-  color: #fff;
+  background-color: var(--primary-bg-color);
+  color: var(--font-color);
 }
 .page-header .admin__action-dropdown.active {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .admin__action-dropdown-menu {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
 }
 .admin-user .admin__action-dropdown-menu > li > a {
   color: #adadad;
 }
 .search-global-field._active .search-global-input {
-  border-color: var(--basic-color);
-  background-color: #373330;
+  border-color: var(--white-color);
+  background-color: var(--primary-bg-color);
   color: var(--white-color);
 }
 .admin__data-grid-actions-wrap .admin__action-dropdown-wrap._active .admin__action-dropdown {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .admin__data-grid-actions-wrap .admin__action-dropdown-wrap._active .admin__action-dropdown-menu {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .admin-user .admin__action-dropdown-menu > li > a {
   margin-top: 1px;
 }
 .admin-user .admin__action-dropdown-menu > li > a:hover {
   background-color: #41362f;
-  color: #fff;
+  color: var(--font-color);
 }
 .actions-split.active {
   box-shadow: none;
 }
 .actions-split.active .action-toggle.action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split.active .action-toggle.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split._active {
   box-shadow: none;
 }
 .actions-split._active .action-toggle.action-primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .actions-split._active .action-toggle.primary {
   background-color: var(--basic-color);
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .menu-wrapper:before {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 .menu-wrapper .logo {
@@ -1179,7 +1307,7 @@ input {
 }
 .admin__menu .level-0 > a {
   border-bottom: 1px solid #dee2e6;
-  color: #fff;
+  color: var(--font-color);
 }
 .admin__menu .level-0:first-child > a {
   border-top: 1px solid #dee2e6;
@@ -1201,8 +1329,16 @@ input {
   left: auto;
 }
 .admin__menu .level-0._active > a {
-  background-color: #e3e3e3;
-  color: #373330;
+  color: var(--font-color);
+  background-color: var(--secondary-bg-color);
+}
+.sticky-header .data-grid-search-control-wrap .data-grid-search-label:before {
+  color: var(--white-color);
+}
+.sticky-header {
+  color: var(--font-color);
+  background-color: var(--secondary-bg-color);
+  padding-top: 20px;
 }
 .admin__menu .submenu-title {
   color: #e3e3e3;
@@ -1223,7 +1359,7 @@ input {
   background: #403934;
 }
 .dashboard-item {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   border: 0;
@@ -1238,17 +1374,17 @@ input {
 }
 .dashboard-item-title, 
 .dashboard-advanced-reports-title {
-  color: #fff;
+  color: var(--font-color);
 }
 .message-system-inner {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   border: 0;
   padding: 20px;
 }
 .dashboard-advanced-reports {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   border: 0;
@@ -1294,14 +1430,14 @@ input {
   border: 0;
 }
 .admin__fieldset-wrapper {
-  background: white;
+  background: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   border: 0;
   padding: 20px;
 }
 .customer-index-edit .fieldset-wrapper {
-  background: white;
+  background: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   border: 0;
@@ -1312,11 +1448,30 @@ input {
   padding: 0;
 }
 .adminhtml-system_config-edit .admin__scope-old {
-  background: white;
+  background-color: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   border: 0;
   padding: 20px;
+}
+.section-config > .admin__collapsible-block > a, 
+.accordion > dt a, 
+.accordion .admin__collapsible-block > a {
+  color: var(--font-color);
+}
+.section-config > .admin__collapsible-block > a:hover, 
+.accordion > dt a:hover, 
+.accordion .admin__collapsible-block > a:hover, 
+.section-config > .admin__collapsible-block > a:visited, 
+.accordion > dt a:visited, 
+.accordion .admin__collapsible-block > a:visited, 
+.section-config > .admin__collapsible-block > a:focus, 
+.accordion > dt a:focus, 
+.accordion .admin__collapsible-block > a:focus {
+  color: #adadad;
+}
+.accordion .config .label {
+  color: var(--font-color);
 }
 .adminhtml-system_config-edit .admin__page-nav {
   box-shadow: none;
@@ -1324,27 +1479,27 @@ input {
   border-radius: 0;
 }
 .dashboard-data {
-  background-color: #514943;
-  color: #fff;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
 }
 .notifications-entry-description {
-  color: #fff;
+  color: var(--font-color);
 }
 a.action-tertiary.action-more {
-  color: #fff;
+  color: var(--font-color);
 }
 .notifications-entry:hover {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
   cursor: pointer;
 }
 .admin__control-select {
-  background-color: #514943;
-  color: #fff;
+  background-color: var(--secondary-bg-color);
+  color: var(--font-color);
 }
 .page-wrapper .admin__control-select:focus {
   background-color: transparent;
   border-color: #fff;
-  color: #fff;
+  color: var(--font-color);
 }
 .admin__old {
   background: #514943;
@@ -1354,7 +1509,7 @@ a.action-tertiary.action-more {
   padding: 20px;
 }
 .data-grid tr:not(.data-grid-editable-row):last-child td {
-  background-color: #373330;
+  background-color: var(--primary-bg-color);
 }
 .admin__old .fieldset-wrapper {
   box-shadow: none;
@@ -1376,18 +1531,18 @@ a.action-tertiary.action-more {
   background: #373330;
   border-radius: 4px;
   border: 1px solid #fff;
-  color: #fff;
+  color: var(--font-color);
 }
 .store-switcher .dropdown .dropdown-menu {
   border-radius: 4px;
-  border-color: var(--basic-color);
-  background-color: #373330;
+  border-color: var(--white-color);
+  background-color: var(--primary-bg-color);
 }
 .store-view .store-switcher-label {
-  color: #fff;
+  color: var(--font-color);
 }
 .admin__field-tooltip .admin__field-tooltip-action:before {
-  color: #fff;
+  color: var(--font-color);
 }
 .admin__action-dropdown:after,
 .admin__action-dropdown:hover:after {
@@ -1399,24 +1554,24 @@ a.action-tertiary.action-more {
   color: #adadad;
 }
 .search-global-label:before {
-  color: #fff;
+  color: var(--font-color);
 }
 .search-global-label:hover:before {
   color: #e3e3e3;
 }
 .store-switcher .dropdown-menu li a:hover {
   background: #4a4542;
-  color: #fff;
+  color: var(--font-color);
 }
 .dashboard-item-title {
   padding-bottom: 5px;
 }
 .dashboard-advanced-reports-title {
   padding-bottom: 5px;
-  color: #fff;
+  color: var(--font-color);
 }
 .dashboard-advanced-reports-content {
-  color: #fff;
+  color: var(--font-color);
 }
 .dashboard-secondary .dashboard-item {
   min-height: 100px;
@@ -1445,7 +1600,7 @@ a.action-tertiary.action-more {
 .tabs-horiz .ui-tabs-anchor {
   border-radius: 4px;
   padding: 1rem 1.8rem 1rem;
-  color: #fff;
+  color: var(--font-color);
   border: 1px solid #fff;
 }
 .tabs-horiz .ui-state-active .ui-tabs-anchor {
@@ -1455,7 +1610,7 @@ a.action-tertiary.action-more {
 }
 .ui-tabs-panel {
   padding: 2rem 0;
-  background: white;
+  background: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   padding: 20px;
@@ -1466,7 +1621,7 @@ a.action-tertiary.action-more {
   margin-bottom: 3rem;
 }
 #sales_order_view_tabs {
-  background: white;
+  background: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   padding: 20px;
@@ -1476,7 +1631,7 @@ a.action-tertiary.action-more {
   overflow: hidden;
 }
 #system_config_tabs {
-  background: white;
+  background: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   padding: 20px;
@@ -1485,8 +1640,18 @@ a.action-tertiary.action-more {
   padding: 0;
   overflow: hidden;
 }
+.admin__table-secondary tbody tr:nth-child(odd) th, 
+.admin__table-secondary tbody tr:nth-child(odd) td {
+  background: var(--primary-bg-color);
+  color: var(--font-color);
+}
+.admin__table-secondary tbody th,
+.admin__table-secondary th, 
+.admin__table-secondary td {
+  color: var(--font-color);
+}
 .admin__page-nav {
-  background: white;
+  background: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   padding: 20px;
@@ -1496,12 +1661,26 @@ a.action-tertiary.action-more {
   overflow: hidden;
 }
 .categories-side-col {
-  background: white;
+  background: var(--primary-bg-color);
   border-radius: 5px;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
   padding: 20px;
   margin-bottom: 3rem;
   border: 0;
+}
+.jstree-anchor, 
+.jstree-anchor:link, 
+.jstree-anchor:visited, 
+.jstree-anchor:hover, 
+.jstree-anchor:active {
+  background-color: transparent;
+  color: var(--white-color);
+}
+.jstree-default .jstree-clicked {
+  background-color: var(--secondary-bg-color);
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px #999999;
+  border: 1px solid var(--font-color);
 }
 .admin__page-nav-title {
   padding: 1.8rem 2rem;
@@ -1513,17 +1692,41 @@ a.action-tertiary.action-more {
   padding: 1.8rem 2rem 2rem 1.7rem;
   border-bottom: 1px solid #e7e0e0;
   margin: 0 10px;
+  color: var(--font-color);
 }
 .admin__page-nav-item._active {
-  border-color: var(--basic-color);
+  border-color: #fff;
+}
+.admin__page-nav._collapsed._show ._collapsible + .admin__page-nav-items {
+  background-color: #524d49;
 }
 .admin__page-nav-item._active .admin__page-nav-link {
   border-right: 0;
   border-bottom: 1px solid #e7e0e0;
   margin: 0 10px;
+  background-color: #524d49;
+  color: var(--font-color);
+}
+li.admin__page-nav-item._last a.admin__page-nav-link {
+  border-bottom: unset;
+}
+.admin__page-nav-item._active {
+  position: relative;
+}
+.admin__page-nav-item._active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #fff;
 }
 .admin__page-nav-item.ui-state-active {
-  border-color: var(--basic-color);
+  border-color: var(--white-color);
 }
 .admin__page-nav-item.ui-state-active .admin__page-nav-link {
   border-right: 0;
@@ -1535,6 +1738,64 @@ a.action-tertiary.action-more {
   color: var(--white-color);
 }
 .admin__page-nav._collapsed._show ._collapsible {
-  background: var(--basic-color);
+  background-color: var(--primary-bg-color);
   color: var(--white-color);
+}
+.admin__page-nav-title._collapsible {
+  background: #373330;
+  color: var(--font-color);
+}
+.abs-action-quaternary:active, 
+.abs-action-quaternary:hover, 
+.abs-action-quaternary:focus, 
+.page-actions > button:active, 
+.page-actions > button:hover, 
+.page-actions > button:focus, 
+.page-actions .page-actions-buttons > button:active, 
+.page-actions .page-actions-buttons > button:hover, 
+.page-actions .page-actions-buttons > button:focus, 
+.page-actions .page-actions-buttons > .action:active, 
+.page-actions .page-actions-buttons > .action:hover, 
+.page-actions .page-actions-buttons > .action:focus, 
+.page-actions .page-actions.floating-header > button:active, 
+.page-actions .page-actions.floating-header > button:hover, 
+.page-actions .page-actions.floating-header > button:focus, 
+.page-actions .page-actions.floating-header > .action:active, 
+.page-actions .page-actions.floating-header > .action:hover, 
+.page-actions .page-actions.floating-header > .action:focus,
+.page-actions > .block-footer .action-add:active, 
+.page-actions > .block-footer .action-add:hover, 
+.page-actions > .block-footer .action-add:focus, 
+.page-actions .page-actions-buttons > .block-footer .action-add:active, 
+.page-actions .page-actions-buttons > .block-footer .action-add:hover, 
+.page-actions .page-actions-buttons > .block-footer .action-add:focus {
+  color: var(--white-color);
+}
+.page-main-actions:not(._hidden), 
+.page-actions._fixed {
+  background: var(--primary-bg-color);
+}
+.page-main-actions .page-actions._fixed .page-actions-inner:before,
+.additional-cache-management h2 span,
+.additional-cache-management span,
+.action-default, 
+button, 
+.block-footer .action-add, 
+.block-footer .action-add {
+  background-color: var(--basic-color);
+  border-color: var(--white-color);
+  color: var(--font-color);  
+}
+.action-default:hover, button:hover, 
+.action-default:active, button:active, 
+.action-default:focus, button:focus, 
+.block-footer .action-add:hover, 
+.block-footer .action-add:active, 
+.block-footer .action-add:focus {
+  color: var(--white-color);
+}
+.pagebuilder-wysiwyg-overlay.visible {
+  background-color: rgba(45, 45, 45, 0.85);
+  border: 1px solid var(--secondary-bg-color);
+  top: 1px;
 }
